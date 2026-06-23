@@ -1,11 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [assignments, setassignment] = useState([
+  const [assignments, setAssignment] = useState([
 
     { id: 1, title: 'Calculus Problem Set', subject: 'Mathematics', dueDate: '2026-06-25', status: 'Pending' },
     { id: 2, title: 'History Essay', subject: 'History', dueDate: '2026-06-12', status: 'Late' },
@@ -80,13 +77,13 @@ function App() {
       {/* Assignments Table */}
       <table border="1" style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
         <thead>
-          <tr style={{ background: '#f2f2f2' }}></tr>
+          <tr style={{ background: '#f2f2f2' }}>
           <th>Title</th>
             <th>Subject</th>
             <th>Due Date</th>
             <th>Status</th>
             <th>Action</th>
-        
+          </tr>
         </thead>
         <tbody>
           {filteredAssignments.map(att => (
